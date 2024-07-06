@@ -40,8 +40,10 @@ export class AuthService extends PrismaClient implements OnModuleInit{
         }
       });
 
+      const { password: __, ...rest} = newUser
+
       return {
-        user: newUser,
+        user: rest,
         token: 'ABC'
       }
 
