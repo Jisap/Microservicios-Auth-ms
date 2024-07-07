@@ -24,7 +24,7 @@ export class AuthService extends PrismaClient implements OnModuleInit{
   }
 
   id: string;
-  async signJWT(payload: JwtPayload){
+  async signJWT(payload: JwtPayload){                           // Genera un jwt en base a un payload
     return this.jwtService.sign(payload)
   }
 
